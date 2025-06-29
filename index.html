@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript app</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="cursor">
+        <header class="heading1">JavaScript</header>
+    <nav id="navbar">
+        <header class="heading2">JavaScript</header>
+        <a href="#Introduction" class="nav-link"><div class="text">Introduction</div></a>
+        <a href="#History_and_Evolution" class="nav-link"><div class="text">History and Evolution</div></a>
+        <a href="#Core_Features_of_JavaScript" class="nav-link"><div class="text">Core Features of JavaScript</div></a>
+        <a href="#JavaScript_Execution_Environment" class="nav-link"><div class="text">JavaScript Execution Environment</div></a>
+        <a href="#The_JavaScript_Ecosystem" class="nav-link"><div class="text">The JavaScript Ecosystem</div></a>
+        <a href="#Advantages_and_Limitations" class="nav-link"><div class="text">Advantages and Limitations</div></a>
+        <a href="#The_Future_of_JavaScript" class="nav-link"><div class="text">The Future of JavaScript</div></a>
+        <a href="#Conclusion" class="nav-link"><div class="text">Conclusion</div></a>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>JavaScript (JS) is a high-level, multi-paradigm language primarily known for its role in web
+development. Unlike HTML and CSS, JavaScript adds logic and interactivity to webpages. Over
+time, the language has matured into a tool used for building complex web apps, mobile apps,
+backend services, and even embedded systems.</p>
+        </section>
+        <section class="main-section" id="History_and_Evolution">
+            <header>History and Evolution</header>
+            <p>JavaScript was created by Brendan Eich in 1995 and quickly became a standard due to its
+inclusion in Netscape Navigator. It was standardized as ECMAScript in 1997. Notable
+improvements over time include:</p>
+<ul><li>ES6 (2015): Major features like let, const, arrow functions, classes, and modules.</li>
+<li>Node.js (2009): JavaScript on the server.</li></ul>
+<p>Example: ES5 vs ES6 Syntax</p>
+<div class="code">
+    <code>// ES5</br>
+var name = "Alice";</br>
+function greet(name) {</br>
+  return "Hello, " + name;</br>
+}</br>
+
+// ES6</br>
+const name = "Alice";</br>
+const greet = (name) => `Hello, ${name}`;</br>
+</code>
+</div>
+        </section>
+        <section class="main-section" id="Core_Features_of_JavaScript">
+            <header class="top-padding">Core Features of JavaScript</header>
+            <p>1.Variables and Data Types</p>
+           <div class="code">
+            <code>```javascript</br>
+let age = 25; // number</br>
+const name = "John"; // string</br>
+let isStudent = true; // boolean</br>
+let user = { name, age }; // object</br></code>
+</div>
+<p>2.Functions and Scope</p>
+<div class="code"><code>```javascript</br>
+function add(x, y) {</br>
+ return x + y;</br>
+}</br>
+const subtract = (a, b) => a - b;</br>
+let result = add(10, 5); // 15</br>
+```</br></code>
+</div>
+<p>3.Asynchronous Programming</p>
+<div class="code">
+    <code>```javascript</br>
+// Using Promises</br>
+function fetchData() {</br>
+ return new Promise((resolve) => {</br>
+ setTimeout(() => resolve("Data loaded"), 1000);</br>
+ });</br>
+}</br>
+fetchData().then(console.log);</br>
+// Using async/await</br>
+async function loadData() {</br>
+ const data = await fetchData();</br>
+ console.log(data);</br>
+}</br>
+loadData();</br>
+```</br></code>
+</div>
+        </section>
+        <section class="main-section" id="JavaScript_Execution_Environment">
+            <header class="top-padding">JavaScript Execution Environment</header>
+            <p>1.Web Browsers</p>
+            <div class="code">
+                <code>```javascript</br>
+// Manipulating DOM</br>
+document.getElementById("demo").textContent = "Hello JavaScript!";</br>
+```</br></code>
+</div>
+<p>2.Node.js</p>
+<div class="code">
+<code>```javascript</br>
+// Node.js script</br>
+const fs = require("fs");</br>
+fs.writeFileSync("test.txt", "Hello from Node.js!");</br>
+```</br></code>
+</div>
+        </section>
+        <section class="main-section" id="The_JavaScript_Ecosystem">
+            <header class="top-padding">The JavaScript Ecosystem</header>
+            <p>1.Popular Frameworks</p>
+            <ul>
+                <li>React.js-UI library</li>
+                <li>Vue.js-Progressive framework</li>
+                <li>Angular-Complete SPA framework</li>
+            </ul>
+            <p>Example: A basic React component</p>
+            <div class="code">
+                <code>```jsx</br>
+function Welcome(props) {</br>
+ return <h1>Hello, {props.name}</h1>;</br>
+}</br>
+```</br></code>
+</div>
+<p>2.NPM and Modules</p>
+<div class="code">
+    <code>```bash</br>
+npm install express</br>
+```</br>
+```javascript</br>
+// Node.js with Express</br>
+const express = require("express");</br>
+const app = express();</br>
+app.get("/", (req, res) => res.send("Hello World!"));</br>
+app.listen(3000);</br>
+```</br></code>
+</div>
+        </section>
+        <section class="main-section" id="Advantages_and_Limitations">
+            <header class="top-padding Advantages_and_Limitations">Advantages and Limitations</header>
+            <table>
+                <thead>
+                    <tr>
+                    <th>Advantages</th>
+                    <th>Limitations</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <caption>Here are some Advantages and Limitations</caption>
+                    <tr>
+                        <th>Universally supported by browsers</th>
+                        <th>Browser inconsistencies (though decreasing)</th>
+                    </tr>
+                    <tr>
+                        <th>Huge ecosystem and libraries</th>
+                        <th>Can be misused by beginners</th>
+                    </tr>
+                    <tr>
+                        <th>Enables full-stack development</th>
+                        <th>Dynamic typing may cause runtime bugs</th>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="main-section" id="The_Future_of_JavaScript">
+            <header class="top-padding">The Future of JavaScript</header>
+            <p><b>New ECMAScript proposals bring better syntax, performance, and features such as:</b></p>
+            <ul><li>Optional Chaining</li>
+            <li>Nullish Coalescing</li></ul>
+            <div class="code">
+                <code>```javascript</br>
+const user = null;</br>
+console.log(user?.name); // undefined</br>
+```</br></code>
+</div>
+        </section>
+        <section class="main-section" id="Conclusion">
+            <header class="top-padding">Conclusion</header>
+            <p>JavaScript is no longer limited to simple scripts. It now forms the backbone of modern application
+development across platforms. With the support of strong tooling, an active community, and ongoing
+enhancements to the language, JavaScript continues to be one of the most valuable skills for
+developers worldwide.</p>
+        </section>
+    </main>
+</div>
+</body>
+</html>

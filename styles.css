@@ -1,0 +1,137 @@
+body {
+    margin:0 auto;
+    padding-top: 10px;
+    position: relative;
+    background-color: rgba(222, 184, 135, 0.725);
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+}
+nav {
+    border: solid rgba(0, 0, 0, 0.315) 2px;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 24%;
+    height: 100vh;
+    position: fixed;
+    justify-content: space-evenly;
+
+}
+main {
+    padding-top: 20px;
+    padding-left: 30%;
+    padding-right: 10%;
+}
+.nav-link {
+    border: solid  rgba(0, 0, 0, 0.315) 2px;
+    border-right: 0;
+    height: 100%;
+    border-bottom: 0;
+    text-align: center;
+    align-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, fallback;
+    font-size: 1.2em;
+    color: black;
+    font-weight: bold;
+}
+a {
+    text-decoration: none;
+}
+.code {
+    color: white;
+    background-color: rgba(35, 32, 27, 0.724);
+    padding: 10px 20px;
+    user-select: all;
+    border-radius: 10px;
+}
+header {
+    text-transform: uppercase;
+    font-size: large;
+    font-weight: bold;
+}
+p {
+    transform: translateX(10px);
+}
+.top-padding {
+    padding-top: 20px;
+}
+table {
+    background-color: wheat;
+    border: 2px solid black;
+}
+table > thead > tr > th {
+    border: 2px solid black;
+    background-color: rgba(35, 32, 27, 0.724);
+}
+table > tbody > tr > th {
+    border: 2px solid black;
+}
+.Advantages_and_Limitations {
+    padding-bottom: 10px;
+}
+/* .text:hover {
+     text-shadow: 0 0 10px brown;
+     animation: text-shadow 01s step-start ;
+} */
+ .nav-link:hover {
+    border: solid  rgba(0, 0, 0, 0.315) 2px;
+    text-shadow: 0 0 10px brown;
+    animation: text-shadow 75ms ease-in-out forwards;
+    background-color: wheat;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+ }
+.code::selection {
+    background-color: rgb(241, 159, 99);
+    color:black
+}
+@keyframes text-shadow {
+    from{
+        transform:scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+    
+}
+.heading1 {
+    display: none;
+}
+@media screen and (max-width: 549px) {
+    nav {
+        display: flex;
+        position:relative;
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+        overflow-x:auto;
+        height: 100px;
+        border: none;
+    }
+    main {
+        padding:50px 10px 10px 10px;
+    }
+    body{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+        height: 100vh;
+        overflow-x: auto;
+    }
+    .nav-link {
+        border-top: 1px solid black;
+    }
+    .heading2 {
+        display: none;
+    }
+    .heading1 {
+        width: 50%;
+       transform: translateX(70%);
+       padding: 10px;
+       display: block;
+    }
+}
